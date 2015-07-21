@@ -1,0 +1,2 @@
+#!/bin/bash
+ivy -dependency "$1" "$2" "$3" -retrieve "[artifact]-[revision](-[classifier]).[ext]"

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+name=$1
+script_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+mkdir $name
+cp $script_dir/assets/init-java/Makefile `pwd`/$name/
+mkdir `pwd`/$name/lib
+mkdir `pwd`/$name/src
+mkdir `pwd`/$name/src/assets
+cp $script_dir/assets/init-java/base.java `pwd`/$name/src/$name.java
+sed -i "" "1s/__name__/$name/" `pwd`/$name/src/$name.java

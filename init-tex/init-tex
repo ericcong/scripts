@@ -3,6 +3,6 @@
 name=$1
 script_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 mkdir $name
-cp $script_dir/assets/texinit/Makefile `pwd`/$name/
-cp $script_dir/assets/texinit/init.tex `pwd`/$name/$name.tex
+cp $script_dir/assets/init-tex/Makefile `pwd`/$name/
+cp $script_dir/assets/init-tex/init.tex `pwd`/$name/$name.tex
 sed -i "" "1s/@filename/$name/" `pwd`/$name/Makefile
